@@ -1,0 +1,26 @@
+{
+  "name": "js-core-utils",
+  "version": "1.0.0",
+  "description": "An all-purpose out-of-the-box utility package library for Javascript Developers who are tired of always writing utility function codes again and again.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm ./lib/* && npx tsc"
+  },
+  "author": "John Cedrick Bermejo and Dexter Louie Aniez",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "currency-formatter": "^1.5.9",
+    "dateformat": "^5.0.3",
+    "moment": "^2.29.1",
+    "units-converter": "^1.0.3",
+    "utils": "^0.3.1"
+  }
+}
