@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "An all-purpose out-of-the-box utility package library for Javascript Developers who are tired of always writing utility function codes again and again.",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm ./lib/* && npx tsc"
+    "build": "npx tsc"
   },
   "author": "John Cedrick Bermejo and Dexter Louie Aniez",
   "license": "MIT",
