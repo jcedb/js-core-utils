@@ -3,25 +3,30 @@
   "version": "1.0.0",
   "description": "An all-purpose out-of-the-box utility package library for Javascript Developers who are tired of always writing utility function codes again and again.",
   "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm ./lib/* && npx tsc"
+    "build": "rollup -c"
   },
   "author": "John Cedrick Bermejo and Dexter Louie Aniez",
   "license": "MIT",
   "files": [
-    "lib"
+    "lib",
+    "package.json"
   ],
-  "devDependencies": {
-    "tslint": "^6.1.3",
-    "typescript": "^4.5.5"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcedb/js-core-utils.git"
   },
   "dependencies": {
-    "currency-formatter": "^1.5.9",
-    "dateformat": "^5.0.3",
-    "moment": "^2.29.1",
-    "units-converter": "^1.0.3",
-    "utils": "^0.3.1"
+    "is-empty": "^1.2.0",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "rollup": "^2.68.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.5"
   }
 }
