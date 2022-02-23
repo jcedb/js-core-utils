@@ -1,5 +1,5 @@
-import empty from "is-empty"
-import { TDataTypes } from "../types/datatypes.type";
+import empty from 'is-empty';
+import { TDataTypes } from '../types/datatypes.type';
 
 export const isEmpty = (args: any) => {
   return empty(args);
@@ -14,7 +14,7 @@ export const isArray = (args: any) => {
 };
 
 export const isObject = (args: any) => {
-  return typeof args === "object";
+  return typeof args === 'object';
 };
 
 export const isType = (args: any, type: TDataTypes) => {

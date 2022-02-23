@@ -1,5 +1,3 @@
-import {
-	ICurrencyFormat
-} from "./../models/number.model"
+import { ICurrencyFormat } from './../models/number.model';
 
-export type TNumber = ICurrencyFormat
+export type TNumber = ICurrencyFormat;
