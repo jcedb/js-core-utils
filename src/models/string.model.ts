@@ -1,4 +1,4 @@
-export interface Mask {
+export interface IMask {
 	str: string,
 	maskLength: number,
 	maskChar: string,
