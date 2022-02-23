@@ -1,5 +1,3 @@
-import {
-	IMask
-} from "../models/string.model"
+import { IMask } from '../models/string.model';
 
-export type TString = IMask
+export type TString = IMask;
