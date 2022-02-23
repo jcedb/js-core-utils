@@ -1,6 +1,6 @@
 export interface IMask {
 	str: string,
-	maskLength: number,
+	maskLength?: number,
 	maskChar: string,
-	maskLocation: "start" | "end"
+	maskLocation?: "start" | "end"
 }

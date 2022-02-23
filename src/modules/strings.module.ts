@@ -12,13 +12,19 @@ export const mask = function(payload: TString) {
 	
 		const { str, maskLength, maskChar, maskLocation } = payload
 
-		if (maskLength > str.length) throw new Error("max length should not be greater than the string length to mask.")
+		if (maskLength && maskLength > str.length) throw new Error("max length should not be greater than the string length to mask.")
+		if ((!maskLength && maskLocation)) throw new Error("Mask length cannot be undefined if mask location is defined.")
+		if ((maskLength && !maskLocation)) throw new Error("Mask location cannot be undefined if mask length is defined.")
 
-		if (maskLocation === "end") {
-			return str.toString().slice(0, str.length-maskLength) + str.toString().slice(str.length-maskLength, str.length).replace(/./g, maskChar);
+		if (maskLocation && maskLength) {
+			if (maskLocation === "end") {
+				return str.toString().slice(0, str.length-maskLength) + str.toString().slice(str.length-maskLength, str.length).replace(/./g, maskChar);
+			}
+
+			return str.toString().slice(0, maskLength).replace(/./g, maskChar) + str.toString().slice(maskLength);
 		}
 
-		return str.toString().slice(0, maskLength).replace(/./g, maskChar) + str.toString().slice(maskLength);
+		return str.toString().replace(/./g, maskChar)
 	} catch (err) {
 		throw err
 	}

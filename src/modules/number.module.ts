@@ -1,6 +1,6 @@
 import { TNumber } from "./../types/number.type"
 
-export const getCurrencySymbol = function(currencyType: TNumber) {
+export const toCurrency = function(currencyType: TNumber) {
 	try {
 		if (typeof currencyType !== "object") throw new Error("Invalid argument type, parameter should be of type object with keys { value: number, currency: string, locale: string }")
 		

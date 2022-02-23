@@ -1,15 +1,15 @@
 /** This file contains the unit tests for all integrated methods in this library */
 
-const { getCurrencySymbol, mask, Subject, Observable } = require("./../lib/index")
+const { toCurrency, mask, Subject, Observable } = require("./../lib/index")
 
 /**
  * 
- * @method getCurrencySymbol() requires an argument as an object, with keys:
+ * @method toCurrency() requires an argument as an object, with keys:
  * value = the value of type number
  * currency = currency type of type string, i.e, USD, PHP, etc..
  * locale = currency locale of type string, i,e, en-US, en-CA, etc..
  */
-const convertToCurrency = getCurrencySymbol({ value: 100, currency: "USD", locale: "en-US" })
+const convertToCurrency = toCurrency({ value: 100, currency: "USD", locale: "en-US" })
 
 /**
  * 
@@ -21,11 +21,9 @@ const convertToCurrency = getCurrencySymbol({ value: 100, currency: "USD", local
  * 
  * ### Examples
  */
-const maskPassword = mask({ 
-	str: "mypassword123", 
-	maskLength: ("mypassword123").length,
-	maskChar: "*",
-	maskLocation: "start"
+const maskAll = mask({ 
+	str: "mypassword123",
+	maskChar: "*"
 }) /** This will mask the whole string */
 
 const maskStart = mask({
@@ -42,12 +40,7 @@ const maskEnd = mask({
 	maskLocation: "end"
 }) /** This will mask the last 4 characters of the string */
 
-const subject = new Subject()
-const observable = new Observable()
-
-const observable1 = () => {
-	console.log("Hola! I'm the first observable.")
-}
-
-subject.subscribe(observable1)
-observable.fireObserver(observable1)
+console.log(`Mask all: ${ maskAll }`)
+console.log(`Mask start: ${ maskStart }`)
+console.log(`Mask end: ${ maskEnd }`)
+console.log(`To currency: ${ convertToCurrency }`)
