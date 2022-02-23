@@ -1,4 +1,4 @@
-import { TNumber } from "./../types/number.type"
+import { TNumber } from './../types/number.type';
 
 export const toCurrency = function(currencyType: TNumber) {
 	try {
@@ -9,13 +9,13 @@ export const toCurrency = function(currencyType: TNumber) {
 	
 		const { value, currency, locale } = currencyType
 
-		const formatter = new Intl.NumberFormat(locale, {
-			style: "currency",
-			currency
-		})
+    const formatter = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency
+    });
 
-		return formatter.format(value)
-	} catch (err) {
-		throw err
-	}
-}
+    return formatter.format(value);
+  } catch (err) {
+    throw err;
+  }
+};

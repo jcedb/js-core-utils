@@ -17,9 +17,9 @@ export interface IFullNameCamel {
 }
 
 export interface IFullNameKebab {
-  "first-name"?: string;
-  "middle-name"?: string;
-  "last-name"?: string;
+  'first-name'?: string;
+  'middle-name'?: string;
+  'last-name'?: string;
 }
 
 export interface IFullNameSnake {

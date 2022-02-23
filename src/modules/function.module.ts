@@ -56,3 +56,11 @@ export class Subject {
 		}
 	}
 }
+
+export const ternaryOperator = (
+  condition: boolean,
+  trueValue: any,
+  falseValue?: any
+) => {
+  return condition ? trueValue : falseValue ?? null;
+};
