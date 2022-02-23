@@ -1,6 +1,6 @@
 /** This file contains the unit tests for all integrated methods in this library */
 
-const { toCurrency, mask, Subject, Observable } = require("./../lib/index")
+const { toCurrency, mask, Subject } = require("./../lib/index")
 
 /**
  * 
@@ -39,6 +39,30 @@ const maskEnd = mask({
 	maskChar: "*",
 	maskLocation: "end"
 }) /** This will mask the last 4 characters of the string */
+
+/**
+ * 
+ * @class Observable() allows you to add multiple observable functions from your view
+ * and will later trigger it whenever you want using the fireObserver method
+ */
+const observers = new Subject()
+
+/** Sample observable functions */
+const observerFn1 = () => console.log("Hola! first observer!")
+const observerFn2 = () => console.log("Hola! second observer!")
+const observerFn3 = () => console.log("Hola! third observer!")
+
+/**
+ * 
+ * @method subscribe() will take a single argument with type of either array of functions or a single function
+ */
+observers.subscribe([observerFn1, observerFn2, observerFn3])
+
+/**
+ * 
+ * @method fireObserver() argument is optional, you can provide a function name to specify which observer you want to trigger
+ */
+observers.fireObserver(observerFn2)
 
 console.log(`Mask all: ${ maskAll }`)
 console.log(`Mask start: ${ maskStart }`)
