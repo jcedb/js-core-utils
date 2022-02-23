@@ -1,6 +1,5 @@
+import empty from "is-empty"
 import { TDataTypes } from "../types/datatypes.type";
-
-const empty = require("is-empty");
 
 export const isEmpty = (args: any) => {
   return empty(args);
