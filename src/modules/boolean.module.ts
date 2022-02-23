@@ -1,4 +1,4 @@
-const empty = require("is-empty");
+import empty from "is-empty"
 
 export const isEmpty = (args: any) => {
   return empty(args);
