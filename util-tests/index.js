@@ -1,6 +1,6 @@
 /** This file contains the unit tests for all integrated methods in this library */
 
-const { getCurrencySymbol, mask } = require("./../lib/index")
+const { getCurrencySymbol, mask, Subject, Observable } = require("./../lib/index")
 
 /**
  * 
@@ -41,3 +41,13 @@ const maskEnd = mask({
 	maskChar: "*",
 	maskLocation: "end"
 }) /** This will mask the last 4 characters of the string */
+
+const subject = new Subject()
+const observable = new Observable()
+
+const observable1 = () => {
+	console.log("Hola! I'm the first observable.")
+}
+
+subject.subscribe(observable1)
+observable.fireObserver(observable1)
