@@ -6,7 +6,8 @@ const {
   Subject,
   Observable,
   isEmpty,
-  hasValue
+  hasValue,
+  uppercase
 } = require('../lib/index');
 
 /**
@@ -62,5 +63,11 @@ const observable1 = () => {
 
 /** Test Executor */
 (() => {
-  // console.log(hasValue(''));
+  // prettier-ignore
+  console.log(
+    /** Put logic here */
+
+    
+
+  );
 })();
