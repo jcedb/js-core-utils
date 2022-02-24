@@ -1,5 +1,6 @@
 import { TFullName } from '../types/fullname.type';
 import { TString } from '../types/string.type';
+import { TUpperCase } from '../types/uppercase.type';
 import { hasValue } from './boolean.module';
 
 export const mask = function (payload: TString) {
@@ -63,4 +64,23 @@ export const fullname = (obj: TFullName) => {
   const mid = hasValue(middle) ? ` ${middle} ` : ' ';
 
   return first + mid + last;
+};
+
+export const uppercase = (str: string, set?: TUpperCase) => {
+  switch (set) {
+    case 'words':
+      const arr = str.split(' ');
+
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+      }
+
+      return arr.join(' ');
+    case 'sentence':
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    case 'all':
+      return str.toUpperCase();
+    default:
+      return str.toUpperCase();
+  }
 };
