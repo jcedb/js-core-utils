@@ -3,7 +3,6 @@
     "moduleResolution": "node",
     "outDir": "lib",
     "target": "es5",
-    "module": "esnext",
     "lib": ["es2015"],
     "sourceMap": true,
     "strict": true,
@@ -20,5 +19,5 @@
     "esModuleInterop": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "lib", "**/*.test.ts"]
+  "exclude": ["node_modules", "lib", "**/*.test.ts", "es5"]
 }

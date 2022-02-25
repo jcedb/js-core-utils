@@ -8,4 +8,4 @@ export const { hasValue, isEmpty, isArray, isObject, isType } = boolean;
 export const { fullname, mask } = strings;
 export const { toCurrency } = number;
 export const { objectLoop } = objects;
-export const { Subject, ternaryOperator } = functions;
+export const { Subject, ternaryOperator, ProxyUtil } = functions;

@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "An all-purpose out-of-the-box utility package library for Javascript Developers who are tired of always writing utility function codes again and again.",
   "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "test": "node test/index.js",
+    "start:api": "nodemon test/proxy/api",
     "build": "rollup -c"
   },
   "author": "John Cedrick Bermejo and Dexter Louie Aniez",
@@ -20,11 +19,14 @@
     "url": "https://github.com/jcedb/js-core-utils.git"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
     "is-empty": "^1.2.0",
     "moment": "^2.29.1"
   },
   "devDependencies": {
     "@types/is-empty": "^1.2.1",
+    "nodemon": "^2.0.15",
     "rollup": "^2.68.0",
     "rollup-plugin-typescript2": "^0.31.2",
     "tslint": "^6.1.3",

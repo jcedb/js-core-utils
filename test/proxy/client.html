@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="./../../lib/index.js" type="javascript"></script>
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="getPersons()">Send Request</button>
+	<script>
+		const endpoint = "http://localhost:3000"
+		const csProxy = new ProxyUtil()
+
+		async function getPersons() {
+			try {
+				/** Call proxy here to check for cache data */
+				const proxyData = await csProxy.retrieveCache("persons")
+
+				console.log(proxyData)
+				const personsRequest = await fetch(`${ endpoint }/persons`)
+				const personsJSON = await personsRequest.json()
+			} catch (err) {
+				console.error(err)
+			}	
+		}
+	</script>
+</body>
+</html>

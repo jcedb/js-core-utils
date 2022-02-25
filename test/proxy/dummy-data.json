@@ -1,0 +1,76 @@
+{
+	"persons": [
+		{
+			"name": "Dexter Louie Aniez",
+			"age": 23,
+			"address": "Pagadian City"
+		},
+		{
+			"name": "John Cedrick Bermejo",
+			"age": 23,
+			"address": "Mahayag"
+		}, 
+		{
+			"name": "Jeffrey Abellon",
+			"age": 24,
+			"address": "Rizal Molave"
+		},
+		{
+			"name": "Brian Villarubia",
+			"age": 25,
+			"address": "Bliss Molave"
+		},
+		{
+			"name": "Mario Langomez",
+			"age": 27,
+			"address": "Sudlon Molave"
+		},
+		{
+			"name": "Daniecar Padayao",
+			"age": 25,
+			"address": "Dumalinao"
+		},
+		{
+			"name": "Nikka Bercero",
+			"age": 26,
+			"address": "Midsalip"
+		},
+		{
+			"name": "Herman Morales",
+			"age": 24,
+			"address": "Midsalip"
+		},
+		{
+			"name": "Cherry Jean Magas",
+			"age": 23,
+			"address": "Ramon Magsaysay"
+		},
+		{
+			"name": "Adame Cate Pasaylo",
+			"age": 24,
+			"address": "Tambulig"
+		},
+		{
+			"name": "Alejandro Oletres",
+			"age": 25,
+			"address": "Tukuran"
+		},
+		{
+			"name": "Gerlan Dorona",
+			"age": 27,
+			"address": "Dumingag"
+		}
+	],
+	"countries": [
+		"Canada",
+		"Russia",
+		"USA",
+		"Singapore",
+		"Indonesia",
+		"Thailand",
+		"Cuba",
+		"Malaysia",
+		"Japan",
+		"China"
+	]
+}
