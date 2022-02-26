@@ -10,4 +10,4 @@ export const { fullname, mask, uppercase } = strings;
 export const { getCurrencySymbol } = number;
 export const { objectLoop } = objects;
 export const { each } = arrays;
-export const { Subject, Observable, ternaryOperator } = functions;
+export const { Subject, Observable, doIf } = functions;
