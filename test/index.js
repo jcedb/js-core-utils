@@ -7,7 +7,9 @@ const {
   Observable,
   isEmpty,
   hasValue,
-  uppercase
+  uppercase,
+  each,
+  objectLoop
 } = require('../lib/index');
 
 /**
