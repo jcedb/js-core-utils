@@ -72,4 +72,16 @@ const observable1 = () => {
     
 
   );
+
+  objectLoop(
+    {
+      name: 'John Doe',
+      age: 24
+    },
+    (data, index) => {
+      const { key, value } = data;
+
+      console.log(key, value);
+    }
+  );
 })();

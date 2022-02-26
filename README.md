@@ -12,25 +12,22 @@ npm install js-core-utils --save
 ## Usage
 
 ```
-import { each } from 'js-core-utils';
+import { objectLoop } from 'js-core-utils';
 
-each([
+objectLoop(
   {
     name: 'John Doe',
     age: 24
   },
-  {
-    name: 'Mike Tyson',
-    age: 30
+  (data, index) => {
+    const { key, value } = data;
+
+    console.log(key, value);
   }
-], (data, index) => {
-  const { key, value } = data;
+);
 
-  console.log(key, value);
-});
-
-// John Doe 24
-// Mike Tyson 30
+// name John Doe
+// age 24
 ```
 
 
