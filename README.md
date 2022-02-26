@@ -3,7 +3,7 @@ An all-purpose out-of-the-box utility package library for Javascript Developers 
 
 ## Installation
 
-Use npm too install js-core-utils.
+Use npm to install js-core-utils.
 
 ```
 npm install js-core-utils --save
@@ -29,8 +29,8 @@ each([
   console.log(key, value);
 });
 
-# John Doe 24
-# Mike Tyson 30
+// John Doe 24
+//Mike Tyson 30
 ```
 
 
