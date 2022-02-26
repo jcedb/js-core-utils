@@ -30,7 +30,7 @@ each([
 });
 
 // John Doe 24
-//Mike Tyson 30
+// Mike Tyson 30
 ```
 
 
