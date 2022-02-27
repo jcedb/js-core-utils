@@ -60,3 +60,14 @@ export class Observable extends Subject {
 export const doIf = (condition: boolean, trueValue: any, falseValue?: any) => {
   return condition ? trueValue : falseValue ?? null;
 };
+
+// export const toBase64 = (
+//   file: File,
+//   callback: (result: string | ArrayBuffer | null) => void
+// ) => {
+//   const reader = new FileReader();
+//   reader.onloadend = function () {
+//     callback(reader.result);
+//   };
+//   reader.readAsDataURL(file);
+// };
