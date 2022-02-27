@@ -84,3 +84,7 @@ export const uppercase = (str: string, set?: TUpperCase) => {
       return str.toUpperCase();
   }
 };
+
+export const ellipses = (str: string, length: number = 0, cs?: string) => {
+  return str.slice(0, length) + (cs ?? '...');
+};
