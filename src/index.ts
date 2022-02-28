@@ -5,9 +5,10 @@ import * as objects from './modules/objects.module';
 import * as arrays from './modules/arrays.module';
 import * as functions from './modules/function.module';
 
-export const { hasValue, isEmpty, isArray, isObject, isType } = boolean;
+export const { hasValue, isEmpty, isArray, isObject, isType, isPlainObject } =
+  boolean;
 export const { fullname, mask, uppercase, ellipses } = strings;
 export const { getCurrencySymbol } = number;
-export const { objectLoop } = objects;
+export const { objectLoop, immutate } = objects;
 export const { each } = arrays;
-export const { Subject, Observable, doIf } = functions;
+export const { Subject, Observable, doIf, tryCatch } = functions;

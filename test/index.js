@@ -11,7 +11,8 @@ const {
   each,
   objectLoop,
   toBase64,
-  ellipses
+  ellipses,
+  tryCatch
 } = require('../lib/index');
 
 /**

@@ -20,3 +20,7 @@ export const isObject = (args: any) => {
 export const isType = (args: any, type: TDataTypes) => {
   return typeof args === type;
 };
+
+export const isPlainObject = (obj: any) => {
+  return typeof obj === 'object' && !Array.isArray(obj);
+};
