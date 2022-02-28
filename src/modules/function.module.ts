@@ -61,6 +61,19 @@ export const doIf = (condition: boolean, trueValue: any, falseValue?: any) => {
   return condition ? trueValue : falseValue ?? null;
 };
 
+export const tryCatch = (
+  tryLogic: () => any,
+  catchLogic?: (error: any) => any
+) => {
+  try {
+    tryLogic();
+  } catch (error) {
+    if (catchLogic) {
+      catchLogic(error);
+    } else console.error(error);
+  }
+};
+
 // export const toBase64 = (
 //   file: File,
 //   callback: (result: string | ArrayBuffer | null) => void
