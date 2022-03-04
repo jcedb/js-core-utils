@@ -74,13 +74,25 @@ export const tryCatch = (
   }
 };
 
-// export const toBase64 = (
-//   file: File,
-//   callback: (result: string | ArrayBuffer | null) => void
-// ) => {
-//   const reader = new FileReader();
-//   reader.onloadend = function () {
-//     callback(reader.result);
-//   };
-//   reader.readAsDataURL(file);
-// };
+export const sticky = (target: string | HTMLElement) => {
+  const isString = typeof target === 'string';
+  const getElement = (isString ? document.querySelector(target) : target) as HTMLElement;
+  const targetOffset = getElement.offsetHeight;
+
+  const body = document.querySelector('body') as HTMLBodyElement;
+  const style = getElement.style;
+
+  window.onscroll = () => {
+    if (window.scrollY > targetOffset) {
+      style.position = 'fixed';
+      style.top = '0';
+      style.width = '100%';
+      body.style.paddingTop = `${getElement.offsetHeight}px`;
+    } else {
+      style.position = '';
+      style.top = '';
+      style.width = '';
+      body.style.paddingTop = '';
+    }
+  };
+};
