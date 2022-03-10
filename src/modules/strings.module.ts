@@ -1,9 +1,8 @@
 import { TFullName } from '../types/fullname.type';
 import { TString } from '../types/string.type';
 import { TUpperCase } from '../types/uppercase.type';
-import { hasValue } from './boolean.module';
 
-export const mask = function (payload: TString) {
+export const mask = function(payload: TString) {
   try {
     if (!payload) throw new Error('Argument is required.');
     if (typeof payload !== 'object')
@@ -39,8 +38,10 @@ export const mask = function (payload: TString) {
     }
 
     return (
-      str.toString().slice(0, maskLength).replace(/./g, maskChar) +
-      str.toString().slice(maskLength)
+      str
+        .toString()
+        .slice(0, maskLength)
+        .replace(/./g, maskChar) + str.toString().slice(maskLength)
     );
   } catch (err) {
     throw err;
@@ -61,7 +62,7 @@ export const fullname = (obj: TFullName) => {
   const last: string =
     obj.LastName || obj.lastName || obj['last-name'] || obj.last_name || '';
 
-  const mid = hasValue(middle) ? ` ${middle} ` : ' ';
+  const mid = middle ? ` ${middle} ` : ' ';
 
   return first + mid + last;
 };

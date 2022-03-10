@@ -1,6 +1,6 @@
 import { TNumber } from './../types/number.type';
 
-export const getCurrencySymbol = function (currencyType: TNumber) {
+export const getCurrencySymbol = function(currencyType: TNumber) {
   try {
     if (typeof currencyType !== 'object')
       throw new Error(
@@ -21,7 +21,7 @@ export const getCurrencySymbol = function (currencyType: TNumber) {
 
     const formatter = new Intl.NumberFormat(locale, {
       style: 'currency',
-      currency
+      currency,
     });
 
     return formatter.format(value);
