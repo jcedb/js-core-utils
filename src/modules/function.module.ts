@@ -7,9 +7,9 @@ export class Subject {
 
   isFunction(fn: Function) {
     return (
-      typeof fn == 'function' ||
-      Object.prototype.toString.call(fn) == '[object Function]' ||
-      {}.toString.call(fn) == '[object Function]'
+      typeof fn === 'function' ||
+      Object.prototype.toString.call(fn) === '[object Function]' ||
+      {}.toString.call(fn) === '[object Function]'
     );
   }
 

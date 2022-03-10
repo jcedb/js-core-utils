@@ -3,7 +3,7 @@ import {
   IFullNameKebab,
   IFullNamePascal,
   IFullNamePlain,
-  IFullNameSnake
+  IFullNameSnake,
 } from '../models/fullname.model';
 
 export type TFullName = IFullNamePlain &
