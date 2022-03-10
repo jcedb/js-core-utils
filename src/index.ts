@@ -5,7 +5,7 @@ import * as objects from './modules/objects.module';
 import * as arrays from './modules/arrays.module';
 import * as functions from './modules/function.module';
 
-export const { hasValue, isEmpty, isArray, isObject, isType, isEven } = boolean;
+export const { isArray, isObject, isType, isEven } = boolean;
 export const { fullname, mask, uppercase, ellipses } = strings;
 export const { getCurrencySymbol } = number;
 export const { objectLoop, immutate } = objects;

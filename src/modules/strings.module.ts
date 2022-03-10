@@ -1,7 +1,6 @@
 import { TFullName } from '../types/fullname.type';
 import { TString } from '../types/string.type';
 import { TUpperCase } from '../types/uppercase.type';
-import { hasValue } from './boolean.module';
 
 export const mask = function(payload: TString) {
   try {
@@ -63,7 +62,7 @@ export const fullname = (obj: TFullName) => {
   const last: string =
     obj.LastName || obj.lastName || obj['last-name'] || obj.last_name || '';
 
-  const mid = hasValue(middle) ? ` ${middle} ` : ' ';
+  const mid = middle ? ` ${middle} ` : ' ';
 
   return first + mid + last;
 };
